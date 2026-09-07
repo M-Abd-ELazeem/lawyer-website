@@ -41,6 +41,19 @@
   opacity: 0.85;
   cursor: pointer;
 }
+.btn-light {
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+.btn-light:hover {
+  background: rgba(201, 168, 76, 0.15);
+
+  cursor: pointer;
+}
 
 .bg-gradient-gold {
   background-image: var(--gradient-gold);
@@ -48,4 +61,11 @@
 
 .text-gold {
   color: var(--gold);
+}
+
+.gold-divider {
+  background: var(--gradient-gold);
+  width: 60px;
+  height: 2px;
+  display: inline-block;
 }
