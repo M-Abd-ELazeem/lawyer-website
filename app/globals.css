@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --gold: #c9a84c;
+  --gold: #f0c040;
   --gradient-gold: linear-gradient(135deg, #c9a84c, #e8c97a);
   --dark: rgb(18, 28, 36);
   --dark-card: #111827;
