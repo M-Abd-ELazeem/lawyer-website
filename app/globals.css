@@ -6,6 +6,8 @@
   --dark: rgb(18, 28, 36);
   --dark-card: #111827;
   --dark-section: #1b252e;
+  --white: white;
+  --muted-foreground: #bdb7ab;
 }
 
 .section-dark {
@@ -29,6 +31,7 @@
   color: var(--gold);
 }
 
+/* buttons */
 .btn-gold {
   background: var(--gold);
   color: black;
@@ -54,18 +57,31 @@
 
   cursor: pointer;
 }
-
+/* background icon gold */
 .bg-gradient-gold {
   background-image: var(--gradient-gold);
 }
 
+/* text colors */
 .text-gold {
   color: var(--gold);
 }
-
+.text-c-white {
+  color: var(--white);
+}
+.text-c-foreground {
+  color: var(--muted-foreground);
+}
+/* line */
 .gold-divider {
   background: var(--gradient-gold);
-  width: 60px;
+  width: 70px;
   height: 2px;
   display: inline-block;
+}
+
+
+/*  */
+.border-gold {
+  border: 1px solid var(--gold);
 }

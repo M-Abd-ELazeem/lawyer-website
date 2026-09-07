@@ -14,7 +14,7 @@ export default function Hero() {
       {/* overlay */}
       <div className="absolute inset-0 bg-linear-to-t from-[#0a0f1a]/90 via-[#0a0f1a]/50 to-[#0a0f1a]/20"></div>
       {/* content */}
-      <div className="relative min-h-screen flex items-center justify-start px-8 lg:px-30">
+      <div className="relative min-h-screen flex items-center justify-start px-8 lg:px-20">
         <div className="max-w-xl text-white text-right">
           {/* gold line */}
           <span className="gold-divider mb-6"></span>
