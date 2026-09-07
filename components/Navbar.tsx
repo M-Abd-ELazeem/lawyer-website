@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className=" flex justify-between items-center px-5 py-3 lg:px-20 bg-black/30 backdrop-blur-md shadow sticky top-0 z-50">
+    <nav className=" flex justify-between  items-center px-5 py-3 lg:px-20 bg-black/30 backdrop-blur-md shadow sticky top-0 z-50">
       {/* logo */}
       <div>
         <Link className="flex items-center gap-3" href="/">
@@ -63,7 +63,7 @@ export default function Navbar() {
       </ul>
 
       {/* button - desktop */}
-      <button className="hidden md:block btn-gold">احجز استشارتك</button>
+      <button className="hidden text-sm md:block btn-gold">احجز استشارتك</button>
 
       {/* hamburger - mobile */}
       <button className="md:hidden text-white text-2xl" onClick={() => setIsOpen(!isOpen)}>
