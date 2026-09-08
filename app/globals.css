@@ -3,22 +3,23 @@
 :root {
   --gold: #f0c040;
   --gradient-gold: linear-gradient(135deg, #c9a84c, #e8c97a);
-  --dark: rgb(18, 28, 36);
-  --dark-card: #111827;
-  --dark-section: #1b252e;
+  --dark: #0d1520;        /* الأغمق — للـ Hero والـ sections الداكنة */
+  --dark-card: #1b252e;   /* للكارتات */
+  --dark-section: #162030; /* الأفتح — للـ sections المتناوبة */
   --white: white;
   --muted-foreground: #bdb7ab;
 }
 
-.section-dark {
+
+.bg-dark-section {
   background-color: var(--dark);
 }
 
-.section-light {
+.bg-dark-card {
   background-color: var(--dark-card);
 }
 
-.section-alt {
+.bg-dark-secondary{
   background-color: var(--dark-section);
 }
 .nav-link {
@@ -84,4 +85,19 @@
 /*  */
 .border-gold {
   border: 1px solid var(--gold);
+}
+
+
+/* card */
+.card {
+  background-color: var(--dark-card);
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
 }

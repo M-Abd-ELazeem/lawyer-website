@@ -121,8 +121,9 @@ export default function About() {
       ),
     },
   ];
+
   return (
-    <section className="section-dark py-16 px-6 lg:px-16">
+    <section className="bg-dark-section py-16 px-6 lg:px-16">
       <div className="max-w-7xl mx-auto space-y-16 px-6  lg:px-10">
         {/* Main Content Row */}
         <div className="flex flex-col lg:flex-row gap-12 items-center">
@@ -158,9 +159,9 @@ export default function About() {
                 alt="المستشار محمود حسن"
                 width={600}
                 height={400}
-                className="w-full h-[380px] object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-95 object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" />
             </div>
           </div>
         </div>
@@ -168,10 +169,7 @@ export default function About() {
         {/* Dynamic Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-6">
           {features.map((item, index) => (
-            <div
-              key={index}
-              className="bg-[#111C33]/60 border border-white/5 rounded-xl p-5 text-right space-y-2 hover:border-gold/30 transition duration-300"
-            >
+            <div key={index} className=" card">
               <div className="text-gold">{item.icon}</div>
               <h3 className="text-white font-semibold text-base">{item.title}</h3>
               <p className="text-slate-400 text-xs leading-relaxed">{item.desc}</p>
