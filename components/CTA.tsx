@@ -1,13 +1,33 @@
 export default function CTA() {
   return (
-    <section className=" container my-5 px-16 py-10 bg-mist-500 text-center" >
-      <div className="p-10">
-        <p>هل تبحث عن مساعدة قانونية؟</p>
-        <h4 className="text-3xl font-bold my-4">استشارات قانونية مجانية!</h4>
-        <p>تواصل مع أفضل محامينا في الإمارات — فما عليك سوى تقديم طلب أو الاتصال بنا</p>
-        <button className="bg-white hover:bg-gray-700 text-black font-bold my-5 py-2 px-4 rounded">
-          احجز استشارة الآن
-        </button>
+    <section className="bg-dark-secondary py-16 px-6 lg:px-16 border-y border-white/5">
+      <div className="max-w-4xl mx-auto text-center space-y-6">
+        {/* Title */}
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-c-white leading-tight">
+          هل تحتاج استشارة قانونية؟
+        </h2>
+
+        {/* Description */}
+        <p className="text-c-foreground text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+          تواصل معنا اليوم لحجز موعدك في مكتبنا بمزيد مول، مدينة محمد بن زايد — أبوظبي.
+        </p>
+
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+          <a href="#contact" className="btn-gold flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3">
+            <span>تواصل معي</span>
+            <span className="text-lg leading-none">←</span>
+          </a>
+
+          <a
+            href="https://wa.me/+971 56 648 1670"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-light flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3"
+          >
+            تواصل عبر واتساب
+          </a>
+        </div>
       </div>
     </section>
   );
