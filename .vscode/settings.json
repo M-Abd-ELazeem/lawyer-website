@@ -1,0 +1,7 @@
+{
+  // Show every folder on its own row. With this on (the VS Code default),
+  // a layer holding a single slice is collapsed into one row such as
+  // "features/consultation-request", which makes the FSD layer/slice/segment
+  // structure look inconsistent with layers that have several slices.
+  "explorer.compactFolders": false
+}
