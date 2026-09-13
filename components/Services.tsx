@@ -150,7 +150,7 @@ export default function Services() {
   ];
 
   return (
-    <section className=" container bg-dark-secondary   px-16 py-20">
+    <section className=" container bg-dark-secondary   px-4 py-20">
       <div className="max-w-7xl mx-auto space-y-16 px-6  lg:px-10">
         <div className="w-full text-center ">
           {/* gold line */}
@@ -158,7 +158,7 @@ export default function Services() {
           <h2 className="text-2xl font-bold p-4 text-c-white">مجالات الممارسة</h2>
           <p className="text-c-foreground ">نقدّم استشارات متخصصة في أبرز فروع القانون داخل دولة الإمارات.</p>
         </div>
-        <div className=" text-center p-20">
+        <div className=" text-center p-4">
           {/* grid  */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-6">
             {services.map((service, index) => (

@@ -1,4 +1,37 @@
+"use client";
+
+import { useState } from "react";
+
 export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    consultationType: "",
+    details: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const message =
+      `*طلب استشارة جديد*%0A%0A` +
+      `*الاسم الكامل:* ${formData.name}%0A` +
+      `*رقم الهاتف:* ${formData.phone}%0A` +
+      `*البريد الإلكتروني:* ${formData.email || "غير محدد"}%0A` +
+      `*نوع الاستشارة:* ${formData.consultationType}%0A` +
+      `*تفاصيل القضية:*%0A${formData.details}`;
+
+    const whatsappNumber = "971566481670";
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+    window.open(whatsappUrl, "_blank");
+  };
+
   const contactInfo = [
     {
       title: "اتصل بنا",
@@ -67,8 +100,8 @@ export default function ContactForm() {
   ];
 
   return (
-    <section id="contact" className="bg-dark-secondary py-20 px-6 lg:px-16">
-      <div className="max-w-6xl mx-auto space-y-12 px-6  lg:px-10">
+    <section id="contact" className="bg-dark-section py-20 px-6 lg:px-16">
+      <div className="max-w-6xl mx-auto space-y-12 px-6 lg:px-10">
         {/* الهيدر مع الخط الذهبي بالنص */}
         <div className="text-center space-y-2">
           <span className="gold-divider"></span>
@@ -80,7 +113,13 @@ export default function ContactForm() {
         {/* الكروت الثلاثة */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {contactInfo.map((item, index) => (
-            <a key={index} href={item.href} className="card text-center flex flex-col items-center">
+            <a
+              key={index}
+              href={item.href}
+              target={item.href.startsWith("http") ? "_blank" : "_self"}
+              rel="noopener noreferrer"
+              className="card text-center flex flex-col items-center"
+            >
               <div className="icon-box mb-4">{item.icon}</div>
               <h3 className="text-c-white font-bold text-lg mb-2">{item.title}</h3>
               <p className="text-c-foreground text-xs leading-relaxed">{item.desc}</p>
@@ -88,24 +127,27 @@ export default function ContactForm() {
           ))}
         </div>
 
-        {/**/}
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Main Form (احجز استشارة) */}
           <div className="lg:col-span-7 bg-dark-card border border-white/5 rounded-xl p-6 sm:p-8 space-y-6">
-            {" "}
             <div className="text-center space-y-1.5">
               <h2 className="text-2xl font-bold text-c-white">احجز استشارة</h2>
               <p className="text-c-foreground text-xs">
                 سيتم تحويلك إلى الواتساب لإرسال الطلب مباشرةً إلى المكتب. جميع المعلومات تُعامل بسرية تامة.
               </p>
             </div>
-            <form className="space-y-4 text-right">
+
+            <form onSubmit={handleSubmit} className="space-y-4 text-right">
               {/* Field 1 & 2 */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
                   <label className="text-c-foreground text-xs block">الاسم الكامل</label>
                   <input
                     type="text"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
                     className="bg-dark-section border border-white/10 rounded-md p-3 w-full text-c-white text-sm focus:outline-none focus:border-gold transition"
                   />
                 </div>
@@ -114,6 +156,10 @@ export default function ContactForm() {
                   <label className="text-c-foreground text-xs block">رقم الهاتف</label>
                   <input
                     type="tel"
+                    name="phone"
+                    required
+                    value={formData.phone}
+                    onChange={handleChange}
                     className="bg-dark-section border border-white/10 rounded-md p-3 w-full text-c-white text-sm focus:outline-none focus:border-gold transition"
                   />
                 </div>
@@ -124,6 +170,9 @@ export default function ContactForm() {
                 <label className="text-c-foreground text-xs block">البريد الإلكتروني (اختياري)</label>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="bg-dark-section border border-white/10 rounded-md p-3 w-full text-c-white text-sm focus:outline-none focus:border-gold transition"
                 />
               </div>
@@ -133,6 +182,10 @@ export default function ContactForm() {
                 <label className="text-c-foreground text-xs block">نوع الاستشارة</label>
                 <input
                   type="text"
+                  name="consultationType"
+                  required
+                  value={formData.consultationType}
+                  onChange={handleChange}
                   className="bg-dark-section border border-white/10 rounded-md p-3 w-full text-c-white text-sm focus:outline-none focus:border-gold transition"
                 />
               </div>
@@ -141,12 +194,16 @@ export default function ContactForm() {
               <div className="space-y-1.5">
                 <label className="text-c-foreground text-xs block">تفاصيل القضية</label>
                 <textarea
+                  name="details"
                   rows={4}
+                  required
+                  value={formData.details}
+                  onChange={handleChange}
                   className="bg-dark-section border border-white/10 rounded-md p-3 w-full text-c-white text-sm focus:outline-none focus:border-gold transition resize-none"
                 />
               </div>
 
-              {/* Submit Button aligned to left/end like screenshot */}
+              {/* Submit Button */}
               <div className="flex justify-start pt-2">
                 <button
                   type="submit"
@@ -203,6 +260,7 @@ export default function ContactForm() {
                 <span>فتح في خرائط جوجل</span>
               </a>
             </div>
+
             {/* Section 2: ساعات العمل */}
             <div className="space-y-3">
               <h3 className="text-c-white font-bold text-lg">ساعات العمل</h3>
@@ -263,7 +321,9 @@ export default function ContactForm() {
                 </div>
               </div>
             </div>
+
             <hr className="border-white/10 my-4" />
+
             {/* Section 3: الهاتف والبريد */}
             <div className="space-y-2.5">
               <a
