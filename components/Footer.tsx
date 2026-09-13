@@ -52,22 +52,22 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="#about" className="hover:text-gold transition">
+              <Link href="/#about" className="hover:text-gold transition">
                 نبذة عني
               </Link>
             </li>
             <li>
-              <Link href="#services" className="hover:text-gold transition">
+              <Link href="/#services" className="hover:text-gold transition">
                 الخدمات
               </Link>
             </li>
             <li>
-              <Link href="#articles" className="hover:text-gold transition">
+              <Link href="/articles" className="hover:text-gold transition">
                 المقالات القانونية
               </Link>
             </li>
             <li>
-              <Link href="#contact" className="hover:text-gold transition">
+              <Link href="/#contact" className="hover:text-gold transition">
                 تواصل معي
               </Link>
             </li>

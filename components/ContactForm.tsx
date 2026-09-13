@@ -18,16 +18,19 @@ export default function ContactForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const message =
-      `*طلب استشارة جديد*%0A%0A` +
-      `*الاسم الكامل:* ${formData.name}%0A` +
-      `*رقم الهاتف:* ${formData.phone}%0A` +
-      `*البريد الإلكتروني:* ${formData.email || "غير محدد"}%0A` +
-      `*نوع الاستشارة:* ${formData.consultationType}%0A` +
-      `*تفاصيل القضية:*%0A${formData.details}`;
+    const message = [
+      "*طلب استشارة جديد*",
+      "",
+      `*الاسم الكامل:* ${formData.name}`,
+      `*رقم الهاتف:* ${formData.phone}`,
+      `*البريد الإلكتروني:* ${formData.email || "غير محدد"}`,
+      `*نوع الاستشارة:* ${formData.consultationType}`,
+      "*تفاصيل القضية:*",
+      formData.details,
+    ].join("\n");
 
     const whatsappNumber = "971566481670";
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
     window.open(whatsappUrl, "_blank");
   };

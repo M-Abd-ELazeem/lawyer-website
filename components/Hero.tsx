@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className=" container lg:px-15 bg-dark-section min-h-screen">
+    <section id="hero" className="relative container lg:px-15 bg-dark-section min-h-screen">
       {/* background image */}
       <Image
         alt="hero lawyer"
@@ -34,9 +34,9 @@ export default function Hero() {
           </p>
           {/* buttons */}
           <div className="flex gap-4 justify-start mb-10">
-            <a className="btn-gold flex items-center gap-2"> احجز استشارتك الآن ←</a>
+            <a href="#contact" className="btn-gold flex items-center gap-2"> احجز استشارتك الآن ←</a>
 
-            <a className="btn-light">تصفح الخدمات</a>
+            <a href="#services" className="btn-light">تصفح الخدمات</a>
           </div>
           {/* stats */}
           <div className="flex gap-8 justify-around border-t border-white/20 pt-6">

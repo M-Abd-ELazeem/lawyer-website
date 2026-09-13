@@ -46,17 +46,17 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link className="nav-link" href="/about">
+          <Link className="nav-link" href="/#about">
             عن المحامي
           </Link>
         </li>
         <li>
-          <Link className="nav-link" href="/services">
+          <Link className="nav-link" href="/#services">
             الخدمات
           </Link>
         </li>
         <li>
-          <Link className="nav-link" href="/contact">
+          <Link className="nav-link" href="/#contact">
             تواصل معنا
           </Link>
         </li>
@@ -76,13 +76,13 @@ export default function Navbar() {
           <Link className="nav-link" href="/">
             الرئيسية
           </Link>
-          <Link className="nav-link" href="/about">
+          <Link className="nav-link" href="/#about">
             عن المحامي
           </Link>
-          <Link className="nav-link" href="/services">
+          <Link className="nav-link" href="/#services">
             الخدمات
           </Link>
-          <Link className="nav-link" href="/contact">
+          <Link className="nav-link" href="/#contact">
             تواصل معنا
           </Link>
           <button className="btn-gold w-full">احجز استشارتك</button>

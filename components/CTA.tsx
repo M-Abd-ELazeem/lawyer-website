@@ -20,7 +20,7 @@ export default function CTA() {
           </a>
 
           <a
-            href="https://wa.me/+971 56 648 1670"
+            href="https://wa.me/971566481670"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-light flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3"

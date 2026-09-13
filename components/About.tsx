@@ -85,7 +85,7 @@ export default function About() {
   ];
 
   return (
-    <section className="container bg-dark-section py-16 px-6 lg:px-16">
+    <section id="about" className="container bg-dark-section py-16 px-6 lg:px-16">
       <div className="max-w-7xl mx-auto space-y-16 px-6  lg:px-10">
         {/* Main Content Row */}
         <div className="flex flex-col lg:flex-row gap-12 items-center">
@@ -95,7 +95,7 @@ export default function About() {
               {/* gold line */}
               <span className="gold-divider mb-6"></span>
               <p className="text-gold text-xs font-semibold tracking-widest mb-1">نبذة عني</p>
-              <span className="block h-0.2 w-8 bg-gold rounded-full"></span>
+              <span className="block h-0.5 w-8 bg-gold rounded-full"></span>
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-c-white leading-tight">
