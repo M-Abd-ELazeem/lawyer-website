@@ -123,7 +123,7 @@ export default function About() {
   ];
 
   return (
-    <section className="bg-dark-section py-16 px-6 lg:px-16">
+    <section className="container bg-dark-section py-16 px-6 lg:px-16">
       <div className="max-w-7xl mx-auto space-y-16 px-6  lg:px-10">
         {/* Main Content Row */}
         <div className="flex flex-col lg:flex-row gap-12 items-center">
@@ -136,7 +136,7 @@ export default function About() {
               <span className="block h-0.2 w-8 bg-gold rounded-full"></span>
             </div>
 
-            <h2 className="text-3xl lg:text-4xl font-bold text-white leading-tight">
+            <h2 className="text-3xl lg:text-4xl font-bold text-c-white leading-tight">
               المستشار <span className="text-gold">محمود حسن</span>
             </h2>
 
