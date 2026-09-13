@@ -1,34 +1,8 @@
 import Image from "next/image";
-import { siteConfig, type Feature } from "@/entities/office";
+import { siteConfig } from "@/entities/office";
 import { Card, Container, Divider, Section } from "@/shared/ui";
 import { iconRegistry } from "@/shared/ui/icons";
-
-const features: Feature[] = [
-  {
-    id: "licensed",
-    title: "اعتماد قانوني",
-    description: "مرخص لممارسة الاستشارات القانونية في الإمارات.",
-    icon: "user-check",
-  },
-  {
-    id: "experience",
-    title: "خبرة عملية",
-    description: "أكثر من 8 سنة في القضايا التجارية والمدنية.",
-    icon: "briefcase",
-  },
-  {
-    id: "academic",
-    title: "خلفية أكاديمية",
-    description: "ماجستير في القانون مع تخصص في العقود.",
-    icon: "book-open",
-  },
-  {
-    id: "bilingual",
-    title: "ثنائي اللغة",
-    description: "تقديم الاستشارات بالعربية والإنجليزية.",
-    icon: "languages",
-  },
-];
+import { aboutFeatures } from "../model/features";
 
 export function About() {
   return (
@@ -74,7 +48,7 @@ export function About() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-6">
-          {features.map((item) => {
+          {aboutFeatures.map((item) => {
             const Icon = iconRegistry[item.icon];
             return (
               <Card key={item.id}>

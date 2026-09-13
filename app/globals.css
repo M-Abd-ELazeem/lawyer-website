@@ -1,11 +1,6 @@
 @import "tailwindcss";
 
-/*
- * Fixed type scale for the whole site, keyed by importance rather than
- * arbitrary per-component text-xs/sm/lg picks. Generates text-display,
- * text-h1 ... text-caption utility classes (Tailwind v4 reads any
- * --text-* theme variable as a font-size utility).
- */
+
 @theme {
   --text-display: 3.25rem; /* 52px — the hero headline, once per site */
   --text-display--line-height: 1.15;

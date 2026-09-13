@@ -52,14 +52,21 @@ slice's internals are what makes a structure impossible to refactor later.
 
 ## Rules are enforced, not just documented
 
-`eslint.config.mjs` applies `no-restricted-imports` per layer, so both
+`eslint.config.mjs` applies `no-restricted-imports` per layer. All three
 violations fail `npm run lint`:
 
 - **Upward import** — `entities/` importing from `@/widgets/*`
 - **Cross-slice import** — `entities/office` importing `@/entities/service`
+- **Deep import** — anything importing `@/widgets/hero/ui/Hero` instead of
+  `@/widgets/hero`
 
 If two slices in one layer need the same code, move that code **down** a
 layer rather than importing sideways.
+
+> Both rules must live in a **single** `no-restricted-imports` entry per
+> layer. A later flat-config block replaces a rule's options rather than
+> merging them, so splitting them into two configs silently disables the
+> first one.
 
 ## Adding an API integration
 

@@ -1,12 +1,6 @@
 import { Divider, Section } from "@/shared/ui";
 import { CheckCircleIcon } from "@/shared/ui/icons";
-
-const points = [
-  "خبرة عميقة بالتشريعات الإماراتية ومحاكم أبوظبي.",
-  "سرية تامة في التعامل مع ملفات الموكلين.",
-  "متابعة شخصية من المستشار في كل مرحلة.",
-  "حلول استراتيجية تختصر الوقت وتقلل المخاطر.",
-];
+import { whyUsPoints } from "../model/points";
 
 export function WhyUs() {
   return (
@@ -20,7 +14,7 @@ export function WhyUs() {
             قانونية واقعية وفعّالة.
           </p>
           <ul className="text-c-foreground text-body mt-4 space-y-4">
-            {points.map((point) => (
+            {whyUsPoints.map((point) => (
               <li key={point} className="flex items-start gap-3">
                 <CheckCircleIcon className="size-5 text-gold mt-0.5 shrink-0" />
                 <span className="text-foreground/90">{point}</span>
