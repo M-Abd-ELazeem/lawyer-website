@@ -1,9 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Tajawal } from "next/font/google";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { siteConfig } from "@/config/site";
+import { Navbar } from "@/widgets/navbar";
+import { Footer } from "@/widgets/footer";
+import { siteConfig } from "@/entities/office";
 
 const tajawal = Tajawal({
   subsets: ["arabic"],
