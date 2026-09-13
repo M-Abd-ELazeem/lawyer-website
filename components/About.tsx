@@ -1,91 +1,37 @@
 import Image from "next/image";
+import { iconRegistry } from "@/components/icons/registry";
+import type { Feature } from "@/types";
+
+const features: Feature[] = [
+  {
+    id: "licensed",
+    title: "اعتماد قانوني",
+    description: "مرخص لممارسة الاستشارات القانونية في الإمارات.",
+    icon: "user-check",
+  },
+  {
+    id: "experience",
+    title: "خبرة عملية",
+    description: "أكثر من 8 سنة في القضايا التجارية والمدنية.",
+    icon: "briefcase",
+  },
+  {
+    id: "academic",
+    title: "خلفية أكاديمية",
+    description: "ماجستير في القانون مع تخصص في العقود.",
+    icon: "book-open",
+  },
+  {
+    id: "bilingual",
+    title: "ثنائي اللغة",
+    description: "تقديم الاستشارات بالعربية والإنجليزية.",
+    icon: "languages",
+  },
+];
 
 export default function About() {
-  const features = [
-    {
-      title: "اعتماد قانوني",
-      desc: "مرخص لممارسة الاستشارات القانونية في الإمارات.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="size-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-          />
-        </svg>
-      ),
-    },
-    {
-      title: "خبرة عملية",
-      desc: "أكثر من 8 سنة في القضايا التجارية والمدنية.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="size-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-          />
-        </svg>
-      ),
-    },
-    {
-      title: "خلفية أكاديمية",
-      desc: "ماجستير في القانون مع تخصص في العقود.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="size-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-          />
-        </svg>
-      ),
-    },
-    {
-      title: "ثنائي اللغة",
-      desc: "تقديم الاستشارات بالعربية والإنجليزية.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="size-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
-          />
-        </svg>
-      ),
-    },
-  ];
-
   return (
-    <section id="about" className="w-full  bg-dark-section py-16 px-6 lg:px-16">
+    <section id="about" className="w-full bg-dark-section py-16 px-6 lg:px-16">
       <div className="max-w-7xl mx-auto space-y-16 px-6  lg:px-10">
         {/* Main Content Row */}
         <div className="flex flex-col lg:flex-row gap-12 items-center">
@@ -130,13 +76,18 @@ export default function About() {
 
         {/* Dynamic Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-6">
-          {features.map((item, index) => (
-            <div key={index} className=" card">
-              <div className="text-gold">{item.icon}</div>
-              <h3 className="text-white font-semibold text-base">{item.title}</h3>
-              <p className="text-slate-400 text-xs leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
+          {features.map((item) => {
+            const Icon = iconRegistry[item.icon];
+            return (
+              <div key={item.id} className=" card">
+                <div className="text-gold">
+                  <Icon className="size-6" />
+                </div>
+                <h3 className="text-white font-semibold text-base">{item.title}</h3>
+                <p className="text-slate-400 text-xs leading-relaxed">{item.description}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

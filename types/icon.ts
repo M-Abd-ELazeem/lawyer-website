@@ -19,7 +19,6 @@ export type IconKey =
   | "whatsapp"
   | "send"
   | "check-circle"
-  | "menu"
   | "user-check"
   | "briefcase"
   | "book-open"

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { mainNav } from "@/config/navigation";
 import { siteConfig } from "@/config/site";
+import { ScaleIcon } from "@/components/icons";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,25 +14,7 @@ export default function Navbar() {
       <div>
         <Link className="flex items-center gap-3" href="/">
           <span className="grid place-items-center size-10 rounded-md bg-gradient-gold text-primary-foreground shadow-gold">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-scale size-5"
-              aria-hidden="true"
-            >
-              <path d="M12 3v18"></path>
-              <path d="m19 8 3 8a5 5 0 0 1-6 0zV7"></path>
-              <path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"></path>
-              <path d="m5 8 3 8a5 5 0 0 1-6 0zV7"></path>
-              <path d="M7 21h10"></path>
-            </svg>
+            <ScaleIcon className="size-5" />
           </span>{" "}
           <div className="leading-tight">
             <div className="text-base font-semibold tracking-wide text-white">{siteConfig.name}</div>

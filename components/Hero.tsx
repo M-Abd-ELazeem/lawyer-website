@@ -25,8 +25,10 @@ export default function Hero() {
             <p className="text-gold text-sm tracking-widest">أبوظبي</p>
           </div>
           {/* title */}
-          <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-2">عدالة بصيرة،</h1>
-          <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-gold mb-6">واستشارة موثوقة.</h1>
+          <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            <span className="block mb-2">عدالة بصيرة،</span>
+            <span className="block text-gold">واستشارة موثوقة.</span>
+          </h1>
 
           <p className="text-gray-300 text-lg leading-relaxed mb-8">
             مكتب المستشار محمود حسن للاستشارات القانونية — خبرة ممتدة في خدمة الأفراد والشركات داخل إمارة أبوظبي بحلول

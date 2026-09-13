@@ -1,6 +1,13 @@
+import { CheckCircleIcon } from "@/components/icons";
+
+const points = [
+  "خبرة عميقة بالتشريعات الإماراتية ومحاكم أبوظبي.",
+  "سرية تامة في التعامل مع ملفات الموكلين.",
+  "متابعة شخصية من المستشار في كل مرحلة.",
+  "حلول استراتيجية تختصر الوقت وتقلل المخاطر.",
+];
+
 export default function WhyUs() {
-
-
   return (
     <section id="why-us" className=" w-full bg-dark-section py-16 px-6 lg:px-15 ">
       <div className="max-w-7xl mx-auto space-y-16 flex flex-col lg:flex-row gap-12 items-center px-6  lg:px-10">
@@ -8,89 +15,18 @@ export default function WhyUs() {
         <div className="w-full lg:flex-1 text-right space-y-4">
           {/* gold line */}
           <span className="gold-divider mb-6"></span>
-          <h1 className="text-2xl lg:text-3xl font-bold text-c-white leading-tight">لماذا تختار مكتبنا؟</h1>
+          <h2 className="text-2xl lg:text-3xl font-bold text-c-white leading-tight">لماذا تختار مكتبنا؟</h2>
           <p className="text-c-foreground py-4">
             نلتزم بأعلى معايير المهنية والسرية التامة، ونعمل جنبًا إلى جنب مع موكلينا لفهم احتياجاتهم وصياغة حلول
             قانونية واقعية وفعّالة.
           </p>
-          {/*  */}
           <ul className="text-c-foreground mt-4 space-y-4">
-            <li className="flex items-start gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-circle-check size-5 text-gold mt-0.5 shrink-0"
-                aria-hidden="true"
-              >
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="m9 12 2 2 4-4"></path>
-              </svg>
-              <span className="text-foreground/90">خبرة عميقة بالتشريعات الإماراتية ومحاكم أبوظبي.</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-circle-check size-5 text-gold mt-0.5 shrink-0"
-                aria-hidden="true"
-              >
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="m9 12 2 2 4-4"></path>
-              </svg>
-              <span className="text-foreground/90">سرية تامة في التعامل مع ملفات الموكلين.</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-circle-check size-5 text-gold mt-0.5 shrink-0"
-                aria-hidden="true"
-              >
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="m9 12 2 2 4-4"></path>
-              </svg>
-              <span className="text-foreground/90">متابعة شخصية من المستشار في كل مرحلة.</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-circle-check size-5 text-gold mt-0.5 shrink-0"
-                aria-hidden="true"
-              >
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="m9 12 2 2 4-4"></path>
-              </svg>
-              <span className="text-foreground/90">حلول استراتيجية تختصر الوقت وتقلل المخاطر.</span>
-            </li>
+            {points.map((point) => (
+              <li key={point} className="flex items-start gap-3">
+                <CheckCircleIcon className="size-5 text-gold mt-0.5 shrink-0" />
+                <span className="text-foreground/90">{point}</span>
+              </li>
+            ))}
           </ul>
         </div>
 
