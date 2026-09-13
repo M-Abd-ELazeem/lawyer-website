@@ -58,9 +58,9 @@ export default function Services() {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className="lucide lucide-users size-6"
           aria-hidden="true"
         >
@@ -82,9 +82,9 @@ export default function Services() {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className="lucide lucide-file-text size-6"
           aria-hidden="true"
         >
@@ -107,9 +107,9 @@ export default function Services() {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className="lucide lucide-gavel size-6"
           aria-hidden="true"
         >
@@ -133,9 +133,9 @@ export default function Services() {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className="lucide lucide-scale size-6"
           aria-hidden="true"
         >
@@ -151,22 +151,24 @@ export default function Services() {
 
   return (
     <section className=" container bg-dark-secondary   px-16 py-20">
-      <div className="w-full text-center ">
-        {/* gold line */}
-        <span className="gold-divider mb-6"></span>
-        <h2 className="text-2xl font-bold p-4 text-c-white">مجالات الممارسة</h2>
-        <p className="text-c-foreground ">نقدّم استشارات متخصصة في أبرز فروع القانون داخل دولة الإمارات.</p>
-      </div>
-      <div className=" text-center p-20">
-        {/* grid  */}
-        <div className="grid grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <div key={index} className="card text-right">
-              <div className="text-gold text-3xl mb-3 icon-box">{service.icon}</div>
-              <h4 className="text-white font-semibold mb-2">{service.title}</h4>
-              <p className="text-slate-400 text-sm">{service.desc}</p>
-            </div>
-          ))}
+      <div className="max-w-7xl mx-auto space-y-16 px-6  lg:px-10">
+        <div className="w-full text-center ">
+          {/* gold line */}
+          <span className="gold-divider mb-6"></span>
+          <h2 className="text-2xl font-bold p-4 text-c-white">مجالات الممارسة</h2>
+          <p className="text-c-foreground ">نقدّم استشارات متخصصة في أبرز فروع القانون داخل دولة الإمارات.</p>
+        </div>
+        <div className=" text-center p-20">
+          {/* grid  */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-6">
+            {services.map((service, index) => (
+              <div key={index} className="card text-right">
+                <div className="text-gold text-3xl mb-3 icon-box">{service.icon}</div>
+                <h4 className="text-white font-semibold mb-2">{service.title}</h4>
+                <p className="text-slate-400 text-sm">{service.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
