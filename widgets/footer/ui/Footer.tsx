@@ -1,8 +1,7 @@
-import { MailIcon, MapPinIcon, PhoneIcon, ScaleIcon } from "@/shared/ui/icons";
 import Link from "next/link";
+import { Logo, OpeningHours, mailtoHref, siteConfig, telHref } from "@/entities/office";
 import { footerNav } from "@/shared/config/navigation";
-import { siteConfig } from "@/entities/office";
-import { mailtoHref, telHref } from "@/entities/office";
+import { MailIcon, MapPinIcon, PhoneIcon } from "@/shared/ui/icons";
 
 export function Footer() {
   return (
@@ -10,19 +9,7 @@ export function Footer() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* العمود 1: اللوجو والوصف */}
         <div className="space-y-4">
-          <div className="flex items-center gap-3">
-            <div>
-              <Link className="flex items-center gap-3" href="/">
-                <span className="grid place-items-center size-10 rounded-md bg-gradient-gold text-black shadow-gold">
-                  <ScaleIcon className="size-5" />
-                </span>
-                <div className="leading-tight">
-                  <div className="text-base font-semibold tracking-wide text-white">{siteConfig.name}</div>
-                  <div className="text-[11px] text-gold tracking-[0.3em]">{siteConfig.title}</div>
-                </div>
-              </Link>
-            </div>
-          </div>
+          <Logo />
           <p className="text-xs text-c-foreground/80 leading-relaxed">{siteConfig.description}</p>
         </div>
 
@@ -46,13 +33,13 @@ export function Footer() {
           <ul className="space-y-2.5 text-xs">
             <li>
               <a href={telHref()} className="flex items-center gap-2 hover:text-gold transition">
-                <PhoneIcon className="size-3.5 text-gold" />
+                <PhoneIcon className="size-3.5 text-gold shrink-0" />
                 <span dir="ltr">{siteConfig.phone.display}</span>
               </a>
             </li>
             <li>
               <a href={mailtoHref()} className="flex items-center gap-2 hover:text-gold transition">
-                <MailIcon className="size-3.5 text-gold" />
+                <MailIcon className="size-3.5 text-gold shrink-0" />
                 <span>{siteConfig.email}</span>
               </a>
             </li>
@@ -66,13 +53,7 @@ export function Footer() {
         {/* العمود 4: ساعات العمل */}
         <div className="space-y-3">
           <h3 className="text-c-white font-bold text-sm">ساعات العمل</h3>
-          <ul className="space-y-2 text-xs text-c-foreground/80">
-            {siteConfig.hours.map((entry) => (
-              <li key={entry.days}>
-                {entry.days}: {entry.time}
-              </li>
-            ))}
-          </ul>
+          <OpeningHours className="text-c-foreground/80" />
         </div>
       </div>
 
