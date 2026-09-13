@@ -6,6 +6,9 @@ export { Card } from "./Card";
 export { IconBox } from "./IconBox";
 export { Divider } from "./Divider";
 export { SectionHeading } from "./SectionHeading";
+export { PageHeader } from "./PageHeader";
+export { Breadcrumbs } from "./Breadcrumbs";
+export type { Crumb } from "./Breadcrumbs";
 
 export { Field } from "./form/Field";
 export { Input } from "./form/Input";
