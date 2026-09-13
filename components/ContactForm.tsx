@@ -100,7 +100,7 @@ export default function ContactForm() {
   ];
 
   return (
-    <section id="contact" className="bg-dark-secondary py-20 px-6 lg:px-16">
+    <section id="contact" className="bg-dark-section py-20 px-6 lg:px-16">
       <div className="max-w-6xl mx-auto space-y-12 px-6 lg:px-10">
         {/* الهيدر مع الخط الذهبي بالنص */}
         <div className="text-center space-y-2">

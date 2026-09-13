@@ -14,14 +14,16 @@
 .bg-dark-section {
   background-color: var(--dark);
 }
+.bg-dark-secondary{
+  background-color: var(--dark-section);
+}
+
 
 .bg-dark-card {
   background-color: var(--dark-card);
 }
 
-.bg-dark-secondary{
-  background-color: var(--dark-section);
-}
+
 .nav-link {
   color: white;
   transition: color 0.3s;
