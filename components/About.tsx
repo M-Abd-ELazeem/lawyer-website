@@ -85,7 +85,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="container bg-dark-section py-16 px-6 lg:px-16">
+    <section id="about" className="w-full  bg-dark-section py-16 px-6 lg:px-16">
       <div className="max-w-7xl mx-auto space-y-16 px-6  lg:px-10">
         {/* Main Content Row */}
         <div className="flex flex-col lg:flex-row gap-12 items-center">

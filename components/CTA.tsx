@@ -1,3 +1,7 @@
+import Link from "next/link";
+import { siteConfig } from "@/config/site";
+import { buildWhatsAppUrl } from "@/lib/utils/contact-links";
+
 export default function CTA() {
   return (
     <section className="bg-dark-secondary py-16 px-6 lg:px-16 border-y border-white/5">
@@ -9,18 +13,18 @@ export default function CTA() {
 
         {/* Description */}
         <p className="text-c-foreground text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-          تواصل معنا اليوم لحجز موعدك في مكتبنا بمزيد مول، مدينة محمد بن زايد — أبوظبي.
+          تواصل معنا اليوم لحجز موعدك في مكتبنا بـ{siteConfig.address.short}.
         </p>
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-          <a href="#contact" className="btn-gold flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3">
+          <Link href="/#contact" className="btn-gold flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3">
             <span>تواصل معي</span>
             <span className="text-lg leading-none">←</span>
-          </a>
+          </Link>
 
           <a
-            href="https://wa.me/971566481670"
+            href={buildWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-light flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3"

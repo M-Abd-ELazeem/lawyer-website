@@ -2,7 +2,7 @@ export default function WhyUs() {
 
 
   return (
-    <section id="why-us" className=" container bg-dark-section py-16 px-6 lg:px-15 ">
+    <section id="why-us" className=" w-full bg-dark-section py-16 px-6 lg:px-15 ">
       <div className="max-w-7xl mx-auto space-y-16 flex flex-col lg:flex-row gap-12 items-center px-6  lg:px-10">
         {/*right  */}
         <div className="w-full lg:flex-1 text-right space-y-4">

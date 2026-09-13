@@ -1,6 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import { siteConfig } from "@/config/site";
+import {
+  buildConsultationMessage,
+  buildWhatsAppUrl,
+  mailtoHref,
+  telHref,
+} from "@/lib/utils/contact-links";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -18,28 +25,14 @@ export default function ContactForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const message = [
-      "*طلب استشارة جديد*",
-      "",
-      `*الاسم الكامل:* ${formData.name}`,
-      `*رقم الهاتف:* ${formData.phone}`,
-      `*البريد الإلكتروني:* ${formData.email || "غير محدد"}`,
-      `*نوع الاستشارة:* ${formData.consultationType}`,
-      "*تفاصيل القضية:*",
-      formData.details,
-    ].join("\n");
-
-    const whatsappNumber = "971566481670";
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
-    window.open(whatsappUrl, "_blank");
+    window.open(buildWhatsAppUrl(buildConsultationMessage(formData)), "_blank");
   };
 
   const contactInfo = [
     {
       title: "اتصل بنا",
-      desc: "+971 56 648 1670",
-      href: "tel:+971566481670",
+      desc: siteConfig.phone.display,
+      href: telHref(),
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +53,7 @@ export default function ContactForm() {
     {
       title: "واتساب",
       desc: "راسلنا مباشرة على الواتساب",
-      href: "https://wa.me/971566481670",
+      href: buildWhatsAppUrl(),
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -80,8 +73,8 @@ export default function ContactForm() {
     },
     {
       title: "العنوان",
-      desc: "مزيد مول، مدينة محمد بن زايد، أبوظبي",
-      href: "https://maps.google.com/?q=Mazyad+Mall+Mohammed+Bin+Zayed+City+Abu+Dhabi",
+      desc: siteConfig.address.short,
+      href: siteConfig.address.mapsUrl,
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -238,10 +231,10 @@ export default function ContactForm() {
             <div className="space-y-2">
               <h3 className="text-c-white font-bold text-lg">العنوان</h3>
               <p className="text-c-foreground text-xs leading-relaxed">
-                مزيد مول (Mazyad Mall) - مدينة محمد بن زايد - إمارة أبوظبي، الإمارات العربية المتحدة
+                {siteConfig.address.full}
               </p>
               <a
-                href="https://maps.google.com/?q=Mazyad+Mall+Mohammed+Bin+Zayed+City+Abu+Dhabi"
+                href={siteConfig.address.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gold text-xs font-semibold inline-flex items-center gap-1.5 hover:underline pt-1"
@@ -268,60 +261,28 @@ export default function ContactForm() {
             <div className="space-y-3">
               <h3 className="text-c-white font-bold text-lg">ساعات العمل</h3>
               <div className="space-y-2 text-c-foreground text-xs">
-                <div className="flex items-center justify-start gap-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="15"
-                    height="15"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-gold"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
-                  <span>الأحد - الخميس: 9 صباحاً - 6 مساءً</span>
-                </div>
-                <div className="flex items-center justify-start gap-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="15"
-                    height="15"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-gold"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
-                  <span>السبت: 10 صباحاً - 2 ظهراً</span>
-                </div>
-                <div className="flex items-center justify-start gap-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="15"
-                    height="15"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-gold"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
-                  <span>الجمعة: مغلق</span>
-                </div>
+                {siteConfig.hours.map((entry) => (
+                  <div key={entry.days} className="flex items-center justify-start gap-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="text-gold"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span>
+                      {entry.days}: {entry.time}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -330,7 +291,7 @@ export default function ContactForm() {
             {/* Section 3: الهاتف والبريد */}
             <div className="space-y-2.5">
               <a
-                href="tel:+971566481670"
+                href={telHref()}
                 className="flex items-center justify-start gap-2 text-c-white text-xs hover:text-gold transition"
               >
                 <svg
@@ -347,11 +308,11 @@ export default function ContactForm() {
                 >
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                 </svg>
-                <span dir="ltr">+971 56 648 1670</span>
+                <span dir="ltr">{siteConfig.phone.display}</span>
               </a>
 
               <a
-                href="mailto:info@mahmoud-hassan.ae"
+                href={mailtoHref()}
                 className="flex items-center justify-start gap-2 text-c-white text-xs hover:text-gold transition"
               >
                 <svg
@@ -369,7 +330,7 @@ export default function ContactForm() {
                   <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                 </svg>
-                <span>info@mahmoud-hassan.ae</span>
+                <span>{siteConfig.email}</span>
               </a>
             </div>
           </div>
