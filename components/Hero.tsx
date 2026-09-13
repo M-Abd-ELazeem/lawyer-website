@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className=" container lg:px-15 bg-dark-section min-h-screen">
+    <section className=" w-full lg:px-15 bg-dark-section min-h-screen">
       {/* background image */}
       <Image
         alt="hero lawyer"
@@ -12,7 +12,7 @@ export default function Hero() {
         src="/hero-lawyer-CKDTvzYb.jpg"
       />
       {/* overlay */}
-      <div className="absolute inset-0 bg-linear-to-t from-[#0d1520]/90 via-[#0d1520]/50 to-[#0d1520]/20"></div>
+      <div className="absolute inset-0 bg-linear-to-t from-[#182436]/90 via-[#0d1520]/50 to-[#0d1520]/20"></div>
       {/* content */}
       <div className="relative min-h-screen flex items-center justify-start px-8 lg:px-20">
         <div className="max-w-xl text-white text-right">
