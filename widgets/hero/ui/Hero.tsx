@@ -4,14 +4,14 @@ import { ButtonLink, Divider } from "@/shared/ui";
 
 export function Hero() {
   return (
-    <section id="hero" className="relative container lg:px-15 bg-dark-section min-h-screen">
+    <section id="hero" className="relative w-full lg:px-15 bg-dark-section min-h-screen">
       <Image
         alt="hero lawyer"
         width={1920}
         height={1080}
         priority
         className="absolute inset-0 size-full object-cover"
-        src="/hero-lawyer-CKDTvzYb.jpg"
+        src={siteConfig.images.hero}
       />
       <div className="absolute inset-0 bg-linear-to-t from-[#0d1520]/90 via-[#0d1520]/50 to-[#0d1520]/20" />
 
@@ -20,17 +20,17 @@ export function Hero() {
           <Divider variant="gold" className="mb-6" />
 
           <div className="flex items-center justify-start gap-2 mb-6">
-            <p className="text-gold text-sm tracking-widest">{siteConfig.title}</p>
+            <p className="text-gold text-small tracking-widest">{siteConfig.title}</p>
             <span className="text-gold">·</span>
-            <p className="text-gold text-sm tracking-widest">أبوظبي</p>
+            <p className="text-gold text-small tracking-widest">أبوظبي</p>
           </div>
 
-          <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          <h1 className="text-display font-bold leading-tight mb-6">
             <span className="block mb-2">عدالة بصيرة،</span>
             <span className="block text-gold">واستشارة موثوقة.</span>
           </h1>
 
-          <p className="text-gray-300 text-lg leading-relaxed mb-8">
+          <p className="text-gray-300 text-lead leading-relaxed mb-8">
             مكتب المستشار محمود حسن للاستشارات القانونية — خبرة ممتدة في خدمة الأفراد والشركات داخل إمارة أبوظبي بحلول
             قانونية دقيقة ومدروسة.
           </p>
@@ -47,8 +47,8 @@ export function Hero() {
           <div className="flex gap-8 justify-around border-t border-white/20 pt-6">
             {siteConfig.stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <p className="text-gold text-2xl font-bold">{stat.value}</p>
-                <p className="text-gray-400 text-sm">{stat.label}</p>
+                <p className="text-gold text-h3 font-bold">{stat.value}</p>
+                <p className="text-gray-400 text-small">{stat.label}</p>
               </div>
             ))}
           </div>

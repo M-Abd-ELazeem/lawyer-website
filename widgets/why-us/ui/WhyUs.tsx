@@ -14,12 +14,12 @@ export function WhyUs() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-center px-6 lg:px-10">
         <div className="w-full lg:flex-1 text-right space-y-4">
           <Divider variant="gold" className="mb-6" />
-          <h2 className="text-2xl lg:text-3xl font-bold text-c-white leading-tight">لماذا تختار مكتبنا؟</h2>
-          <p className="text-c-foreground py-4">
+          <h2 className="text-h2 font-bold text-c-white leading-tight">لماذا تختار مكتبنا؟</h2>
+          <p className="text-c-foreground text-body py-4">
             نلتزم بأعلى معايير المهنية والسرية التامة، ونعمل جنبًا إلى جنب مع موكلينا لفهم احتياجاتهم وصياغة حلول
             قانونية واقعية وفعّالة.
           </p>
-          <ul className="text-c-foreground mt-4 space-y-4">
+          <ul className="text-c-foreground text-body mt-4 space-y-4">
             {points.map((point) => (
               <li key={point} className="flex items-start gap-3">
                 <CheckCircleIcon className="size-5 text-gold mt-0.5 shrink-0" />
@@ -33,10 +33,10 @@ export function WhyUs() {
           <div className="absolute -inset-4 bg-gradient-gold/30 blur-2xl rounded-3xl" />
           <blockquote className="relative rounded-2xl border border-gold bg-dark-secondary p-10 shadow-elegant">
             <div className="text-gold text-6xl leading-none font-display">”</div>
-            <p className="mt-2 text-lg leading-loose text-c-foreground">
+            <p className="mt-2 text-lead leading-loose text-c-foreground">
               العدالة ليست مجرد نص قانوني… بل التزام إنساني تجاه كل موكل، وثقة لا تُمنح إلا بعد جهد ومصداقية.
             </p>
-            <footer className="mt-6 text-sm text-gold tracking-widest">— محمود حسن</footer>
+            <footer className="mt-6 text-small text-gold tracking-widest">— محمود حسن</footer>
           </blockquote>
         </div>
       </div>

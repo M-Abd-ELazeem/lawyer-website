@@ -10,13 +10,13 @@ export function Footer() {
         {/* العمود 1: اللوجو والوصف */}
         <div className="space-y-4">
           <Logo />
-          <p className="text-xs text-c-foreground/80 leading-relaxed">{siteConfig.description}</p>
+          <p className="text-small text-c-foreground/80 leading-relaxed">{siteConfig.description}</p>
         </div>
 
         {/* العمود 2: روابط سريعة */}
         <div className="space-y-3">
-          <h3 className="text-c-white font-bold text-sm">روابط سريعة</h3>
-          <ul className="space-y-2 text-xs">
+          <h3 className="text-c-white font-bold text-h4">روابط سريعة</h3>
+          <ul className="space-y-2 text-small">
             {footerNav.map((link) => (
               <li key={link.href}>
                 <Link href={link.href} className="hover:text-gold transition">
@@ -29,8 +29,8 @@ export function Footer() {
 
         {/* العمود 3: معلومات الاتصال */}
         <div className="space-y-3">
-          <h3 className="text-c-white font-bold text-sm">معلومات الاتصال</h3>
-          <ul className="space-y-2.5 text-xs">
+          <h3 className="text-c-white font-bold text-h4">معلومات الاتصال</h3>
+          <ul className="space-y-2.5 text-small">
             <li>
               <a href={telHref()} className="flex items-center gap-2 hover:text-gold transition">
                 <PhoneIcon className="size-3.5 text-gold shrink-0" />
@@ -52,13 +52,13 @@ export function Footer() {
 
         {/* العمود 4: ساعات العمل */}
         <div className="space-y-3">
-          <h3 className="text-c-white font-bold text-sm">ساعات العمل</h3>
+          <h3 className="text-c-white font-bold text-h4">ساعات العمل</h3>
           <OpeningHours className="text-c-foreground/80" />
         </div>
       </div>
 
       {/* الحقوق */}
-      <div className="text-center text-xs text-c-foreground/60 border-t border-white/5 mt-10 pt-6">
+      <div className="text-center text-caption text-c-foreground/60 border-t border-white/5 mt-10 pt-6">
         © {new Date().getFullYear()} {siteConfig.legalName}. جميع الحقوق محفوظة.
       </div>
     </footer>

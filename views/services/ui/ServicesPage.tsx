@@ -23,8 +23,8 @@ export async function ServicesPage() {
                   <IconBox className="mb-3">
                     <Icon className="size-6" />
                   </IconBox>
-                  <h2 className="text-white font-semibold mb-2">{service.title}</h2>
-                  <p className="text-slate-400 text-sm">{service.description}</p>
+                  <h2 className="text-white font-semibold text-h4 mb-2">{service.title}</h2>
+                  <p className="text-slate-400 text-small">{service.description}</p>
                 </Card>
               );
             })}

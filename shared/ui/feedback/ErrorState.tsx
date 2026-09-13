@@ -16,8 +16,8 @@ export function ErrorState({
 }: ErrorStateProps) {
   return (
     <div className="text-center py-16 space-y-4">
-      <h2 className="text-c-white font-bold text-xl">{title}</h2>
-      <p className="text-c-foreground text-sm">{description}</p>
+      <h2 className="text-c-white font-bold text-h3">{title}</h2>
+      <p className="text-c-foreground text-body">{description}</p>
       {onRetry ? (
         <Button variant="light" onClick={onRetry}>
           إعادة المحاولة

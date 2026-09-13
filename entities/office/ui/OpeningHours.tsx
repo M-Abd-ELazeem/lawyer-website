@@ -11,7 +11,7 @@ type OpeningHoursProps = {
 /** Office opening hours. Rendered in both the footer and the contact panel. */
 export function OpeningHours({ showIcon = false, className }: OpeningHoursProps) {
   return (
-    <ul className={cn("space-y-2 text-xs", className)}>
+    <ul className={cn("space-y-2 text-small", className)}>
       {siteConfig.hours.map((entry) => (
         <li key={entry.days} className={cn(showIcon && "flex items-center justify-start gap-2")}>
           {showIcon ? <ClockIcon className="size-4 text-gold shrink-0" /> : null}

@@ -20,7 +20,7 @@ export function Pagination({ page, totalPages, hrefFor }: PaginationProps) {
           href={hrefFor(n)}
           aria-current={n === page ? "page" : undefined}
           className={cn(
-            "size-9 grid place-items-center rounded-md border text-sm transition",
+            "size-9 grid place-items-center rounded-md border text-small transition",
             n === page
               ? "border-gold bg-gold/10 text-gold"
               : "border-white/10 text-c-foreground hover:border-gold/50 hover:text-gold",

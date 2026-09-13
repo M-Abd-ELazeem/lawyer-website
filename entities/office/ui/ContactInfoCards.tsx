@@ -42,8 +42,8 @@ export function ContactInfoCards() {
           <IconBox className="mb-4">
             <Icon className="size-5" />
           </IconBox>
-          <h3 className="text-c-white font-bold text-lg mb-2">{title}</h3>
-          <p className="text-c-foreground text-xs leading-relaxed">{description}</p>
+          <h3 className="text-c-white font-bold text-h4 mb-2">{title}</h3>
+          <p className="text-c-foreground text-small leading-relaxed">{description}</p>
         </a>
       ))}
     </div>

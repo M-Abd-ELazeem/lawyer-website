@@ -13,7 +13,7 @@ type SectionProps = {
 /**
  * The standard page section wrapper.
  *
- * Replaces the "container bg-dark-* py-16 px-6 lg:px-16" string that was
+ * Replaces the "w-full bg-dark-* py-16 px-6 lg:px-16" string that was
  * pasted into five sections, each with slightly different drift.
  */
 export function Section({ id, tone = "dark", className, children }: SectionProps) {
@@ -21,7 +21,7 @@ export function Section({ id, tone = "dark", className, children }: SectionProps
     <section
       id={id}
       className={cn(
-        "container py-16 px-6 lg:px-16",
+        "w-full py-16 px-6 lg:px-16",
         tone === "dark" ? "bg-dark-section" : "bg-dark-secondary",
         className,
       )}

@@ -15,8 +15,8 @@ export function Logo({ className }: LogoProps) {
         <ScaleIcon className="size-5" />
       </span>
       <span className="leading-tight">
-        <span className="block text-base font-semibold tracking-wide text-white">{siteConfig.name}</span>
-        <span className="block text-[11px] text-gold tracking-[0.3em]">{siteConfig.title}</span>
+        <span className="block text-h4 font-semibold tracking-wide text-white">{siteConfig.name}</span>
+        <span className="block text-caption text-gold tracking-[0.3em]">{siteConfig.title}</span>
       </span>
     </Link>
   );

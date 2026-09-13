@@ -34,6 +34,11 @@ export const siteConfig = {
     { days: "الجمعة", time: "مغلق" },
   ],
 
+  images: {
+    hero: "/hero-lawyer.jpg",
+    about: "/about-desk.jpg",
+  },
+
   stats: [
     { value: "+8", label: "سنة خبرة" },
     { value: "+500", label: "قضية ناجحة" },

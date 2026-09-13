@@ -9,13 +9,13 @@ export function OfficeInfoPanel() {
   return (
     <div className="bg-dark-card border border-white/5 rounded-xl p-6 sm:p-8 space-y-6 text-right">
       <div className="space-y-2">
-        <h3 className="text-c-white font-bold text-lg">العنوان</h3>
-        <p className="text-c-foreground text-xs leading-relaxed">{siteConfig.address.full}</p>
+        <h3 className="text-c-white font-bold text-h4">العنوان</h3>
+        <p className="text-c-foreground text-small leading-relaxed">{siteConfig.address.full}</p>
         <a
           href={siteConfig.address.mapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gold text-xs font-semibold inline-flex items-center gap-1.5 hover:underline pt-1"
+          className="text-gold text-small font-semibold inline-flex items-center gap-1.5 hover:underline pt-1"
         >
           <MapPinIcon className="size-4" />
           <span>فتح في خرائط جوجل</span>
@@ -23,7 +23,7 @@ export function OfficeInfoPanel() {
       </div>
 
       <div className="space-y-3">
-        <h3 className="text-c-white font-bold text-lg">ساعات العمل</h3>
+        <h3 className="text-c-white font-bold text-h4">ساعات العمل</h3>
         <OpeningHours showIcon className="text-c-foreground" />
       </div>
 
@@ -32,14 +32,14 @@ export function OfficeInfoPanel() {
       <div className="space-y-2.5">
         <a
           href={telHref()}
-          className="flex items-center justify-start gap-2 text-c-white text-xs hover:text-gold transition"
+          className="flex items-center justify-start gap-2 text-c-white text-small hover:text-gold transition"
         >
           <PhoneIcon className="size-4 text-gold shrink-0" />
           <span dir="ltr">{siteConfig.phone.display}</span>
         </a>
         <a
           href={mailtoHref()}
-          className="flex items-center justify-start gap-2 text-c-white text-xs hover:text-gold transition"
+          className="flex items-center justify-start gap-2 text-c-white text-small hover:text-gold transition"
         >
           <MailIcon className="size-4 text-gold shrink-0" />
           <span>{siteConfig.email}</span>

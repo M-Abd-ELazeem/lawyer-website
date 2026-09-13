@@ -69,8 +69,8 @@ export function ConsultationForm({ services }: ConsultationFormProps) {
   return (
     <div className="bg-dark-card border border-white/5 rounded-xl p-6 sm:p-8 space-y-6">
       <div className="text-center space-y-1.5">
-        <h2 className="text-2xl font-bold text-c-white">احجز استشارة</h2>
-        <p className="text-c-foreground text-xs">
+        <h2 className="text-h2 font-bold text-c-white">احجز استشارة</h2>
+        <p className="text-c-foreground text-small">
           املأ النموذج وسنعاود التواصل معك، أو أرسل طلبك مباشرةً عبر الواتساب. جميع المعلومات تُعامل بسرية تامة.
         </p>
       </div>
@@ -146,7 +146,7 @@ export function ConsultationForm({ services }: ConsultationFormProps) {
         </Field>
 
         <div className="flex flex-col sm:flex-row justify-start gap-3 pt-2">
-          <SubmitButton pending={pending} className="flex items-center justify-center gap-2 py-3 px-6 text-xs font-bold">
+          <SubmitButton pending={pending} className="flex items-center justify-center gap-2 py-3 px-6 text-small font-bold">
             <span>إرسال الطلب</span>
             <SendIcon className="size-4" />
           </SubmitButton>
@@ -155,7 +155,7 @@ export function ConsultationForm({ services }: ConsultationFormProps) {
           <ButtonExternalLink
             href={buildWhatsAppUrl(buildConsultationMessage(values))}
             variant="light"
-            className="flex items-center justify-center gap-2 py-3 px-6 text-xs font-bold"
+            className="flex items-center justify-center gap-2 py-3 px-6 text-small font-bold"
           >
             الإرسال عبر الواتساب
           </ButtonExternalLink>

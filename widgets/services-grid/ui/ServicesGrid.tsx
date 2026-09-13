@@ -24,8 +24,8 @@ export function ServicesGrid({ services }: ServicesGridProps) {
                 <IconBox className="mb-3">
                   <Icon className="size-6" />
                 </IconBox>
-                <h3 className="text-white font-semibold mb-2">{service.title}</h3>
-                <p className="text-slate-400 text-sm">{service.description}</p>
+                <h3 className="text-white font-semibold text-h4 mb-2">{service.title}</h3>
+                <p className="text-slate-400 text-small">{service.description}</p>
               </Card>
             );
           })}

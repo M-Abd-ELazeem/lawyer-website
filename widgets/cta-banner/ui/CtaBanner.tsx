@@ -5,11 +5,11 @@ export function CtaBanner() {
   return (
     <section className="bg-dark-secondary py-16 px-6 lg:px-16 border-y border-white/5">
       <div className="max-w-4xl mx-auto text-center space-y-6">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-c-white leading-tight">
+        <h2 className="text-h2 font-bold text-c-white leading-tight">
           هل تحتاج استشارة قانونية؟
         </h2>
 
-        <p className="text-c-foreground text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+        <p className="text-c-foreground text-body leading-relaxed max-w-2xl mx-auto">
           تواصل معنا اليوم لحجز موعدك في مكتبنا بـ{siteConfig.address.short}.
         </p>
 

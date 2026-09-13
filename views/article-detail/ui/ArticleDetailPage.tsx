@@ -22,8 +22,8 @@ export async function ArticleDetailPage({ slug }: { slug: string }) {
 
           <header className="text-right space-y-3">
             <Divider variant="gold" />
-            <h1 className="text-3xl lg:text-4xl font-bold text-c-white leading-tight">{article.title}</h1>
-            <time dateTime={article.publishedAt} className="block text-c-foreground/70 text-xs">
+            <h1 className="text-h1 font-bold text-c-white leading-tight">{article.title}</h1>
+            <time dateTime={article.publishedAt} className="block text-c-foreground/70 text-caption">
               {formatDate(article.publishedAt)}
             </time>
             {article.tags.length > 0 ? (

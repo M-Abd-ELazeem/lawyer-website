@@ -24,7 +24,7 @@ export function Navbar() {
         ))}
       </ul>
 
-      <ButtonLink href="/#contact" className="hidden text-sm md:block">
+      <ButtonLink href="/#contact" className="hidden md:block">
         احجز استشارتك
       </ButtonLink>
 

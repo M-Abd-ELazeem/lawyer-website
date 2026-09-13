@@ -27,9 +27,9 @@ export function SectionHeading({
   return (
     <div className={cn("space-y-2", align === "center" && "text-center", className)}>
       <Divider variant="gold" className="mb-4" />
-      {eyebrow ? <p className="text-gold text-sm font-medium">{eyebrow}</p> : null}
-      <h2 className="text-2xl sm:text-3xl font-bold text-c-white">{title}</h2>
-      {subtitle ? <p className="text-c-foreground text-sm">{subtitle}</p> : null}
+      {eyebrow ? <p className="text-gold text-small font-semibold tracking-wide">{eyebrow}</p> : null}
+      <h2 className="text-h2 font-bold text-c-white">{title}</h2>
+      {subtitle ? <p className="text-c-foreground text-body">{subtitle}</p> : null}
     </div>
   );
 }

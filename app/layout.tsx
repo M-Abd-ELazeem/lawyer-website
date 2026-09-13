@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     url: siteConfig.url,
   },
-  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({

@@ -12,8 +12,8 @@ export function PageHeader({ title, subtitle, children }: PageHeaderProps) {
   return (
     <header className="text-right space-y-3">
       <Divider variant="gold" />
-      <h1 className="text-3xl lg:text-4xl font-bold text-c-white leading-tight">{title}</h1>
-      {subtitle ? <p className="text-c-foreground text-sm leading-relaxed">{subtitle}</p> : null}
+      <h1 className="text-h1 font-bold text-c-white leading-tight">{title}</h1>
+      {subtitle ? <p className="text-c-foreground text-body leading-relaxed">{subtitle}</p> : null}
       {children}
     </header>
   );
