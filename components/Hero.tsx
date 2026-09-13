@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className=" container lg:px-15 bg-dark-section min-h-screen">
+    <section className=" w-full lg:px-15 bg-dark-section min-h-screen">
       {/* background image */}
       <Image
         alt="hero lawyer"

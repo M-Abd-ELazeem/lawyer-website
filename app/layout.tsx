@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl" className={`${tajawal.variable} ${tajawal.className}`}>
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col w-full overflow-x-hidden">
         <Navbar />
         {children}
         <Footer />

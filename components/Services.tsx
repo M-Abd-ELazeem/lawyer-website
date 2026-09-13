@@ -150,7 +150,7 @@ export default function Services() {
   ];
 
   return (
-    <section className=" container bg-dark-secondary   px-4 py-20">
+    <section className=" w-full bg-dark-secondary   px-4 py-20">
       <div className="max-w-7xl mx-auto space-y-16 px-6  lg:px-10">
         <div className="w-full text-center ">
           {/* gold line */}
