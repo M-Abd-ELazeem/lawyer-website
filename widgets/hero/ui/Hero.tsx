@@ -13,7 +13,7 @@ export function Hero() {
         className="absolute inset-0 size-full object-cover"
         src={siteConfig.images.hero}
       />
-      <div className="absolute inset-0 bg-linear-to-t from-[#0d1520]/90 via-[#0d1520]/50 to-[#0d1520]/20" />
+      <div className="absolute inset-0 bg-linear-to-t from-[#182436]/90 via-[#0d1520]/50 to-[#0d1520]/20" />
 
       <div className="relative min-h-screen flex items-center justify-start px-8 lg:px-20">
         <div className="max-w-xl text-white text-right">
