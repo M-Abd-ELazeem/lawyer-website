@@ -11,7 +11,13 @@ const tajawal = Tajawal({
   variable: "--font-tajawal",
 });
 
+
+
 export const metadata: Metadata = {
+  verification: {
+    google: "BcLq8PEAdgx9hCW-lCqMahc-APceLwbcT3t85VQvcAc",
+  },
+
   metadataBase: new URL(siteConfig.url),
   title: {
     default: `${siteConfig.name} — ${siteConfig.title}`,
