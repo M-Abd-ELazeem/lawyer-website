@@ -11,8 +11,6 @@ const tajawal = Tajawal({
   variable: "--font-tajawal",
 });
 
-
-
 export const metadata: Metadata = {
   verification: {
     google: "BcLq8PEAdgx9hCW-lCqMahc-APceLwbcT3t85VQvcAc",
@@ -24,6 +22,13 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  keywords: [
+    "المستشار محمود حسن",
+    "محمود حسن مستشار قانوني",
+    "مستشار قانوني في أبوظبي",
+    "مكتب محاماة أبوظبي",
+    "استشارات قانونية الإمارات",
+  ],
   openGraph: {
     type: "website",
     locale: siteConfig.locale,

@@ -8,9 +8,8 @@ export const siteConfig = {
   name: "محمود حسن",
   title: "مستشار قانوني",
   legalName: "مكتب المستشار محمود حسن للاستشارات القانونية",
-  description:
-    "مكتب استشارات قانونية متخصص في تقديم الحلول القانونية المتكاملة للأفراد والشركات في إمارة أبوظبي.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://mahmoud-hassan.ae",
+  description: "مكتب استشارات قانونية متخصص في تقديم الحلول القانونية المتكاملة للأفراد والشركات في إمارة أبوظبي.",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://mahmoud-hassan-website-psi.vercel.app/",
   locale: "ar_AE",
 
   phone: {
