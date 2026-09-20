@@ -23,11 +23,31 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: [
+    // اسم شخصي
     "المستشار محمود حسن",
     "محمود حسن مستشار قانوني",
-    "مستشار قانوني في أبوظبي",
+    "Mahmoud Hassan lawyer",
+
+    // خدمات
+    "استشارات قانونية أبوظبي",
+    "مستشار قانوني أبوظبي",
+    "محامي أبوظبي",
     "مكتب محاماة أبوظبي",
     "استشارات قانونية الإمارات",
+    "محامي الإمارات",
+
+    // تخصصات
+    "قانون الأسرة الإمارات",
+    "قانون تجاري أبوظبي",
+    "قضايا عقارية أبوظبي",
+    "صياغة عقود الإمارات",
+    "تحكيم قانوني أبوظبي",
+
+    // إنجليزي
+    "legal consultant Abu Dhabi",
+    "law firm Abu Dhabi",
+    "UAE legal advice",
+    "Abu Dhabi lawyer",
   ],
   openGraph: {
     type: "website",
@@ -38,7 +58,7 @@ export const metadata: Metadata = {
     url: siteConfig.url,
   },
   icons: {
-    icon: "/favicon.jpg",
+    icon: "/favicon..jpg",
   },
 };
 
