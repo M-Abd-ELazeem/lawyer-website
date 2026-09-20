@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     url: siteConfig.url,
   },
   icons: {
-    icon: "/favicon..jpg",
+    icon: "/favicon.jpg",
   },
 };
 
